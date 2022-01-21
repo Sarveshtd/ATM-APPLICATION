@@ -1,6 +1,7 @@
 import java.util.*;
 
 public class Amazon {
+    private static int userId = 0;
     static Scanner sc = new Scanner(System.in);
     static String Admin_User = "aaaa";
     static String Admin_Pass = "1234";
@@ -10,12 +11,11 @@ public class Amazon {
     static int Current_User = -1;
     static int Merchant_attempt = 3;
     static int Current_Merchant = -1;
-    public static ArrayList<String> products =  new ArrayList<>();
+    public static ArrayList<String> products = new ArrayList<>();
     static Dictionary<String, ArrayList<String>> All_Products = new Hashtable<>();
-    static ArrayList<Creat_User_Obj> User_List = new ArrayList<>();
-    // =  new ArrayList<>();
+    static ArrayList<add_user> User_List = new ArrayList<>();
+    // = new ArrayList<>();
 
-    
     public static void Admin_Login() {
         System.out.print("\033[H\033[2J");
         System.out.print("\t Welcome Admin \nEnter the  Admin Id : ");
@@ -28,12 +28,13 @@ public class Amazon {
             Admin();
         }
     }
+
     public static void Merchant() {
         int i = 1;
         System.out.println("\nWelcome merchant \n1.Merchant login\n2.Merchant register\n3.EXIT");
-        while (i > 0){
+        while (i > 0) {
             int n = sc.nextInt();
-            switch (n){
+            switch (n) {
                 case 1:
                     Merchant_login();
                     break;
@@ -43,7 +44,7 @@ public class Amazon {
                 case 3:
                     main(null);
                     break;
-                default :
+                default:
                     System.out.println("Enter the valid cases");
                     break;
 
@@ -51,7 +52,7 @@ public class Amazon {
         }
     }
 
-    public static void Merchant_login(){
+    public static void Merchant_login() {
         while (Merchant_attempt >= 0) {
             System.out.print("Welcome to Merchant Login \nEnter your Id : ");
             String ID = sc.next();
@@ -77,7 +78,8 @@ public class Amazon {
             Merchant();
         }
     }
-    public static void Merchant_register(){
+
+    public static void Merchant_register() {
         System.out.println("\nMerchent Register \nEnter Your Name : ");
         String name = sc.next();
         sc.nextLine();
@@ -90,7 +92,7 @@ public class Amazon {
         Merchant();
     }
 
-    static void Update_product(){
+    static void Update_product() {
         try {
             System.out.print("Enter the product name : ");
             String product = sc.next();
@@ -119,7 +121,8 @@ public class Amazon {
             System.out.println("The product is not found in the List !");
         }
     }
-    public static void Compare_product(){
+
+    public static void Compare_product() {
         System.out.println("Enter the Product Name : ");
         String product = sc.next();
         sc.nextLine();
@@ -140,7 +143,7 @@ public class Amazon {
         }
     }
 
-    public static void Remove_product(){
+    public static void Remove_product() {
         System.out.print("Enter the product name : ");
         String product = sc.next();
         sc.nextLine();
@@ -159,10 +162,11 @@ public class Amazon {
         }
     }
 
-    public static void Merchantpanel(){
+    public static void Merchantpanel() {
         int i = 1;
-        System.out.println("Welcome to Merchant Panal\n1: Add Product\n2 : Update Product\n3 : Compare Product\n4 : Remove Product\n5 : List the Products\n6 : Back");
-        while (i > 0){
+        System.out.println(
+                "Welcome to Merchant Panal\n1: Add Product\n2 : Update Product\n3 : Compare Product\n4 : Remove Product\n5 : List the Products\n6 : Back");
+        while (i > 0) {
             int n = sc.nextInt();
             switch (n) {
                 case 1:
@@ -183,7 +187,7 @@ public class Amazon {
                 case 6:
                     main(null);
                     break;
-                    
+
             }
         }
 
@@ -219,93 +223,91 @@ public class Amazon {
 
     public static void Products() {
         System.out.println("Products : ");
-        //products = new ArrayList<String>();
+        // products = new ArrayList<String>();
         System.out.println(All_Products);
 
     }
 
     public static void Add_Product_category() {
-       // System.out.println("Add Product category");
-       //ArrayList<String> products =  new ArrayList<>();
-       //products = new ArrayList<String>();
+        // System.out.println("Add Product category");
+        // ArrayList<String> products = new ArrayList<>();
+        // products = new ArrayList<String>();
         // System.out.println("view merchant ");
         // System.out.println(merchant);
         // i = i - 1;
         // break;
         // for (int i = 1; i < merchant.size(); i++) {
-        //     System.out.print(merchant.get(i) + " ");
-        //     System.out.println();
+        // System.out.print(merchant.get(i) + " ");
+        // System.out.println();
         // }
-        //System.out.println();
+        // System.out.println();
         // String px=sc.nextLine();
         // sc.next();
         // for(String x:products){
-        //     if(x.equals(px)){
-        //         System.out.println("Product has already  available add another product");
-                
-        //     }
-           
-        //      else{
-        //          products.add(px);
-        //      }
+        // if(x.equals(px)){
+        // System.out.println("Product has already available add another product");
+
+        // }
+
+        // else{
+        // products.add(px);
+        // }
         // }
         System.out.print("Enter the Product Name : ");
-                String productname = sc.next();
-                sc.nextLine();
-                List<String> arr = new ArrayList<>();
-                arr.add("0");
-                arr.add("0");
-                Enumeration enu = All_Products.keys();
-                int k = -1;
-                while (enu.hasMoreElements()) {
-                    if (productname.equals(enu.nextElement())) {
-                        k = 1;
-                    }
-                }
-                if (k == -1) {
-                    All_Products.put(productname, (ArrayList<String>) arr);
+        String productname = sc.next();
+        sc.nextLine();
+        List<String> arr = new ArrayList<>();
+        arr.add("0");
+        arr.add("0");
+        Enumeration enu = All_Products.keys();
+        int k = -1;
+        while (enu.hasMoreElements()) {
+            if (productname.equals(enu.nextElement())) {
+                k = 1;
+            }
+        }
+        if (k == -1) {
+            All_Products.put(productname, (ArrayList<String>) arr);
 
-                } 
-                else {
-                    System.out.println("Product has already  available add another product");
-                }
-             
+        } else {
+            System.out.println("Product has already  available add another product");
+        }
+
         // products.add(px);
         // System.out.println(products);
-        //Admin();
-
-        
-        
+        // Admin();
 
     }
 
     public static void Merchant_list() {
-        //System.out.println("Merchants Names :");
+        // System.out.println("Merchants Names :");
         for (add_merchant merch : merchant) {
-            System.out.println("Merchant Name : " + merch.mname + " Merchant Id : " + merch.merchId+ "  Verified : " + merch.merchverify);
+            System.out.println("Merchant Name : " + merch.mname + " Merchant Id : " + merch.merchId + "  Verified : "
+                    + merch.merchverify);
         }
     }
 
     public static void Approve_merchant() {
         System.out.println("Approve_merchant");
         System.out.println("Enter Merchant Id : ");
-                String merchId = sc.next();
-                sc.nextLine();
-                for (add_merchant merch : merchant) {
-                    if (merchId.equals(Integer.toString(merch.merchId))) {
-                        merch.merchverify = "Yes";
-                        System.out.println(" Merchant Name : " + merch.mname + " Merchant Id : " + merch.merchId
-                                + "Verified : " + merch.merchverify);
-                    } else {
-                        System.out.println("User Id is not founded");
-                    }
-                }
+        String merchId = sc.next();
+        sc.nextLine();
+        for (add_merchant merch : merchant) {
+            if (merchId.equals(Integer.toString(merch.merchId))) {
+                merch.merchverify = "Yes";
+                System.out.println(" Merchant Name : " + merch.mname + " Merchant Id : " + merch.merchId
+                        + "Verified : " + merch.merchverify);
+            } else {
+                System.out.println("User Id is not founded");
+            }
+        }
     }
 
     public static void remove_merchant() {
         System.out.println("remove-merchant : ");
         for (add_merchant merch : merchant) {
-            System.out.println("Merchant Name : " + merch.mname + " Merchant Id : " + merch.merchId+ "  Verified : " + merch.merchverify);
+            System.out.println("Merchant Name : " + merch.mname + " Merchant Id : " + merch.merchId + "  Verified : "
+                    + merch.merchverify);
         }
         System.out.print("Enter the Id of the Merchant to remove : ");
         String id = sc.next();
@@ -329,7 +331,7 @@ public class Amazon {
 
     public static void Admin() {
         int i = 1;
-        //System.out.print("\033[H\033[2J");
+        // System.out.print("\033[H\033[2J");
         while (i != 0) {
             System.out.println("welcome admin");
             System.out.println(
@@ -373,11 +375,140 @@ public class Amazon {
         }
     }
 
-    public static void User(){
+    public static void Cart() {
+        while (true) {
+            System.out.println(User_List.get(Current_User).usercart);
+            System.out.println("1 . Buy product \n2 . Back");
+            int n = sc.nextInt();
+            if (n == 1) {
+                System.out.println("Enter the Product Name :");
+                String product = sc.next();
+                sc.nextLine();
+
+                try {
+
+                    System.out.println("Enter the Product Count : ");
+                    int count = sc.nextInt();
+                    if (count <= Integer.parseInt(User_List.get(Current_User).usercart.get(product).get(0))) {
+                        if (Integer.parseInt(User_List.get(Current_User).usercart.get(product).get(0)) > 0) {
+
+                            if (count * Integer
+                                    .parseInt(User_List.get(Current_User).usercart.get(product).get(1)) <= User_List
+                                            .get(Current_User).usermoney) {
+                                List<String> arr = new ArrayList<>();
+                                arr.add(Integer.toString(
+                                        Integer.parseInt(User_List.get(Current_User).usercart.get(product).get(0))
+                                                - count));
+                                arr.add(User_List.get(Current_User).usercart.get(product).get(1));
+
+                                // Update User Cart
+                                User_List.get(Current_User).usercart.put(product, (ArrayList<String>) arr);
+
+                                // Update Buy History
+                                User_List.get(Current_User).userbuy.add(java.time.LocalDateTime.now() + " ---Buy--- "
+                                        + product + " ---Price--- " + count * Integer
+                                                .parseInt(User_List.get(Current_User).usercart.get(product).get(1)));
+
+                                // Update user Amount
+                                User_List.get(Current_User).usermoney -= (count
+                                        * Integer.parseInt(User_List.get(Current_User).usercart.get(product).get(1)));
+
+                            } else {
+                                System.out.println("Insuficient Amount In your Wallet !");
+                            }
+                        } else {
+                            System.out.println("Product is Empty! :-)");
+                        }
+                    } else {
+                        System.out.println("Count is more than the Available Count in the Cart !");
+                    }
+                } catch (Exception e) {
+                    System.out.println("Product Not Found !");
+                }
+            } else if (n == 2) {
+                User_panel();
+            } else {
+                System.out.println("Please Enter the valid Chooise !");
+            }
+        }
 
     }
 
-    
+    public static void history() {
+        System.out.println("Purchase History !");
+        for (int k = User_List.get(Current_User).userbuy.size() - 1; k >= 0; k--) {
+            System.out.println(User_List.get(Current_User).userbuy.get(k));
+        }
+    }
+    public static void wallet(){
+        while (true) {
+            System.out.println("1 . Check Balance \n2 . Deposit \n3 .Mini Statement \n4 . Back");
+            int n = sc.nextInt();
+
+            // Check Balance
+            if (n == 1) {
+                System.out.println("User Name : " + User_List.get(Current_User).username + "\nAvailable Balance : "
+                        + User_List.get(Current_User).usermoney);
+            } 
+            
+            // Deposit amount
+            else if (n == 2) {
+                System.out.println("Enter the Amount : ");
+                int amount = sc.nextInt();
+                User_List.get(Current_User).Statement.add( "Deposit"+ (amount + User_List.get(Current_User).usermoney));
+                User_List.get(Current_User).usermoney += amount;
+                Date date = new Date();
+                System.out.println(date.toString());
+                System.out.println("Amount Added Successfully !");
+            } 
+            
+            // Generate Mini Statement
+            else if (n == 3) {
+                System.out.println("Mini Statement !");
+                for (int k = User_List.get(Current_User).Statement.size() - 1; k >= 0; k--) {
+                    System.out.println(User_List.get(Current_User).Statement.get(k));
+                }
+            } 
+            
+            // Go back
+            else if (n == 4) {
+                User_panel();
+            } 
+            
+            else {
+                System.out.println("Enter the valid choice !");
+            }
+        }
+    }
+
+    public static void User_panel() {
+        int i = 1;
+        System.out.println("Welcome to user Panel : ");
+        while (i != 0) {
+            System.out.println("1. List of Products \n2. Show Cart \n3. Purchase History \n4. Wallet \n5. Exit ");
+            int n = sc.nextInt();
+            switch (n) {
+                case 1:
+                    System.out.println("Products : ");
+                    // products = new ArrayList<String>();
+                    System.out.println(All_Products);
+                case 2:
+                    Cart();
+                    break;
+                case 3:
+                    history();
+                    break;
+                case 4:
+                    wallet();
+                    break;
+                case 5:
+                    main(null);
+                    break;
+
+            }
+
+        }
+    }
 
     public static void User_login() {
         System.out.println("User_login ");
@@ -389,16 +520,46 @@ public class Amazon {
             String password = sc.next();
             sc.nextLine();
             for (int i = 0; i < User_List.size(); i++) {
-                // System.out.println(User_List.get(i).U_Id+" "+id+"
-                // "+User_List.get(i).U_Password+" "+password);
-                if (Integer.toString(User_List.get(i).U_Id).equals(id)&& User_List.get(i).U_Password.equals(password)) {
+                // System.out.println(User_List.get(i).userId+" "+id+"
+                // "+User_List.get(i).userpass+" "+password);
+                if (Integer.toString(User_List.get(i).userId).equals(id)
+                        && User_List.get(i).userpass.equals(password)) {
                     Current_User = i;
-                    User();
+                    User_panel();
                     break;
                 }
             }
             User_Attempt -= 1;
             User_login();
+        }
+    }
+
+    public static void User_register() {
+        System.out.print("User Register Page\nEnter the User Name : ");
+        String name = sc.next();
+        sc.nextLine();
+        System.out.print("Enter the Password : ");
+        String password = sc.next();
+        sc.nextLine();
+        User_List.add(new add_user(name, password, userId));
+        System.out.println("User Registered successfuly !\n\nYour userId : " + userId + "\n");
+        userId += 1;
+        User_login();
+    }
+
+    public static void User() {
+        System.out.println("Welcome to User Panel :\n1.Login\n2.Register\n3.Go Back");
+        int n = sc.nextInt();
+        switch (n) {
+            case 1:
+                User_login();
+                break;
+            case 2:
+                User_register();
+                break;
+            case 3:
+                main(null);
+                break;
         }
     }
 
@@ -414,7 +575,7 @@ public class Amazon {
                 Merchant();
                 break;
             case 3:
-                User_login();
+                User();
                 break;
             case 4:
                 main(null);
@@ -440,17 +601,17 @@ class add_merchant {
     }
 }
 
- class Creat_User_Obj {
- public String U_Name, U_Password;
- public int U_Id, U_Money;
- public Dictionary<String, ArrayList<String>> U_Cart = new Hashtable<>();
- public List<String> Statement = new ArrayList<>();
- public List<String> U_Buy = new ArrayList<>();
+class add_user {
+    public String username, userpass;
+    public int userId, usermoney;
+    public Dictionary<String, ArrayList<String>> usercart = new Hashtable<>();
+    public List<String> Statement = new ArrayList<>();
+    public List<String> userbuy = new ArrayList<>();
 
- Creat_User_Obj(String name, String password, int id) {
- this.U_Name = name;
- this.U_Password = password;
- this.U_Id = id;
- this.U_Money = 0;
- }
- }
+    add_user(String name, String password, int id) {
+        this.username = name;
+        this.userpass = password;
+        this.userId = id;
+        this.usermoney = 0;
+    }
+}
