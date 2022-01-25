@@ -29,10 +29,9 @@
 	 
   
 # AMAZON-APPLICATION
-######AMAZON SHOPPING APPLICATION:
-
-1.Admin
-2.Merchant
-3.User
-4.Exit
+ ######AMAZON SHOPPING APPLICATION:
+ 1.Admin
+ 2.Merchant
+ 3.User
+ 4.Exit
 # RAILWAY-APPLICATION
