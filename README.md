@@ -79,3 +79,31 @@
 	 5. Exit
 	
 # RAILWAY-APPLICATION
+ ###### Welcome To Railway Reservation System 
+	1 . Admin
+	2 . User
+	3 . Exit
+	
+	Welcome  Admin 
+	Enter the Admin Id : Admin
+	Enter the Admin Password : 1234
+	
+	==>Admin panel
+	Welcome to  Admin Panel
+	1 . Add Number of Station & Seat 
+	2 . View Seat Availability       
+	3 . Back
+	
+	Welcome User 
+	1 . Login
+	2 . Register
+	3 . Back
+	
+	==>Welcome To user panel
+	1 . Book Ticket
+	2 . Delete Ticket
+	3 . History
+	4 . Back
+	
+	
+	
