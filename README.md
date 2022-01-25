@@ -3,7 +3,10 @@
      1.Admin
      2.User
      3.EXIT
-  Choose the operation you want to perform:
+     Choose the operation you want to perform:
+   ## Welcome Admin
+     Enter the Admin User Id : admin     
+     Enter the Admin Password : 1234
   
 # AMAZON-APPLICATION
 # RAILWAY-APPLICATION
