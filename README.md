@@ -29,9 +29,53 @@
 	 
   
 # AMAZON-APPLICATION
- ######AMAZON SHOPPING APPLICATION:
- 1.Admin
- 2.Merchant
- 3.User
- 4.Exit
+ ###### Amazon Shopping Application:
+ 	1.Admin
+ 	2.Merchant
+ 	3.User
+    4.Exit
+	
+	==>Admin
+	Welcome Admin
+	Enter the  Admin Id : aaaa
+	Enter the Admin Password : 1234
+	
+	welcome admin 
+	1.Add Merchant 
+	2.remove merchant
+	3.All products
+	4.Add Product
+	5.Approve merchant
+	6.Merchant list
+	7.EXIT
+	
+	==>Merchant
+	Welcome merchant
+	1.Merchant login
+	2.Merchant register
+	3.EXIT
+	
+	 ==>Merchant Dashboard
+	 Welcome to Merchant Panal
+	 1 : Add Product
+	 2 : Update Product
+	 3 : Compare Product
+	 4 : Remove Product
+	 5 : List the Products
+	 6 : Back
+	
+	=>User
+	Welcome  User:
+	1.Login
+	2.Register
+	3.Go Back
+	
+	 ==>User Dashboard
+	 Welcome to user Panel : 
+	 1. List of Products
+	 2. Show Cart
+	 3. Purchase History
+	 4. Wallet
+	 5. Exit
+	
 # RAILWAY-APPLICATION
