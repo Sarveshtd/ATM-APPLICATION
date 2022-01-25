@@ -15,9 +15,6 @@ public class Railway {
     static int b_id = 0001;
     static ArrayList<bslot> Booking = new ArrayList<>();
     static ArrayList<waitseat> Waiting = new ArrayList<>();
-
-    // ArrayList of object
-    // For User
     static ArrayList<User_> User_List = new ArrayList<>();
 
 
@@ -25,7 +22,7 @@ public class Railway {
         while (true) {
             System.out.print("\033[H\033[2J");
             if (Admin_Attempt >= 0) {
-                System.out.print("Welcome to Admin Login\n\nEnter the Admin Id : ");
+                System.out.print("Welcome Admin \n\nEnter the Admin Id : ");
                 String id = sc.next();
                 sc.nextLine();
                 System.out.print("Enter the Admin Password : ");
@@ -46,7 +43,7 @@ public class Railway {
 
     static void Admin_Dashboard() {
         while (true) {
-            System.out.println("Welcome to the Admin Dashboard ! ");
+            System.out.println("Welcome to  Admin Panel ");
             System.out.println("1 . Add Number of Station & Seat\n2 . View Seat Availability\n3 . Back");
             int ch = sc.nextInt();
             if (ch == 1) {
@@ -65,7 +62,7 @@ public class Railway {
 
     static void User_Panel() {
         while (true) {
-            System.out.println("Welcome to User Panel : \n1 . Login \n2 . Register \n3 . Back");
+            System.out.println("Welcome  User : \n1 . Login \n2 . Register \n3 . Back");
             int ch = sc.nextInt();
             if (ch == 1) {
                 User_Login();
@@ -119,7 +116,7 @@ public class Railway {
 
     static void User_Dashboard() {
         while (true) {
-            System.out.println("Welcome To user Dashboard !");
+            System.out.println("Welcome To user panel");
             System.out.println("1 . Book Ticket\n2 . Delete Ticket\n3 . History\n4 . Back");
             int ch = sc.nextInt();
             if (ch == 1) {
@@ -337,7 +334,7 @@ public class Railway {
     public static void main(String[] args) {
 
         while (true) {
-            System.out.println("Welcome To Online Reservation System !");
+            System.out.println("Welcome To Railway Reservation System ");
             System.out.println("1 . Admin\n2 . User\n3 . Exit");
             int Ch = sc.nextInt();
             if (Ch == 1) {
