@@ -513,7 +513,7 @@ public class Amazon {
     public static void User_login() {
         System.out.println("User_login ");
         while (User_Attempt >= 0) {
-            System.out.print("Login Page\nEnter the User User Id : ");
+            System.out.print("Enter the  User Id : ");
             String id = sc.next();
             sc.nextLine();
             System.out.print("Enter the Password : ");
@@ -578,7 +578,7 @@ public class Amazon {
                 User();
                 break;
             case 4:
-                main(null);
+                System.out.println("Thank you for your visit !");
                 break;
             default:
                 System.out.println("Enter the valid cases");
