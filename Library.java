@@ -46,7 +46,7 @@ public class Library {
         while (true) {
             System.out.println("Welcome " + Admin_Name + " !");
             System.out.println("1.Add new Book\n2.Remove Book\n3.Edit Book\n4.View all Book's\n5.View Borrowed Book List\n6.View Fine List\n7.Register a new Student \n8.Register a new Admin \n9.Total List \n10.Back");
-            System.out.print("Enter your chooise : ");
+            System.out.print("Enter your choice : ");
             String ch = sc.nextLine();
             if (ch.equals("1")) {
                 Add_New_Book();
@@ -194,7 +194,7 @@ public class Library {
     static void View_Books() {
         a: while (true) {
             System.out.println("1.View \n2.Sort By Name \n3.Sort By Quantity \n4.Search \n5.Back");
-            System.out.print("Enter your Chooise : ");
+            System.out.print("Enter your Choice : ");
             String ch = sc.nextLine();
             if (ch.equals("1")) {
                 for (int i = 0; i < Book_List.size(); i++) {
@@ -288,7 +288,7 @@ public class Library {
                 break a;
             } else if (!name.equals(null) && !password.equals(null)) {
                 User_List.add(new User(name, Integer.toString(User_Id_Generate), password));
-                System.out.println("User Id." + User_Id_Generate + " \n !!!! Dont Forgot Your User Id !!!!");
+                System.out.println("User Id." + User_Id_Generate );
                 ++User_Id_Generate;
                 break a;
             } else {
