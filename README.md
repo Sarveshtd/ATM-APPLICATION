@@ -105,5 +105,45 @@
 	3 . History
 	4 . Back
 	
+# LIBRARY-MANAGEMENT
+ ###### Welcome To Library Management System
+ 	1.Admin
+	2.User
+	3.Exit
+	
+	==>Admin panel
+	Welcome  Admin 
+	Enter the Admin Id :1
+	Enter the Admin Password : 1234
+	
+	Welcome sa !
+	1.Add new Book
+	2.Remove Book
+	3.Edit Book
+	4.View all Book's
+	5.View Borrowed Book List
+	6.View Fine List
+	7.Register a new Student
+	8.Register a new Admin
+	9.Total List
+	10.Back
+	Enter your choice :
+	
+	==>User Panel
+	Enter the User Name : 
+	Enter the password :
+	
+	1.Add new Book
+	2.Remove Book
+	3.Edit Book
+	4.View all Book's
+	5.View Borrowed Book List
+	6.View Fine List
+	7.Register a new Student
+	8.Register a new Admin
+	9.Total List
+	10.Back
+	Enter your choice :
+
 	
 	
